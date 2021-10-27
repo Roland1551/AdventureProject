@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class AdventureTest
 {
     public static Tools tools = new Tools();
-    public static Jatekos jatekos = new Jatekos();
+    public static Player player = new Player();
 
     public static void main(String[] args) {
         System.out.println("███████████████████████████████████████████████████████████████████████████████████████");
@@ -27,11 +27,9 @@ public class AdventureTest
         String yesorno = in.nextLine();
         if (yesorno.contains("yes") || yesorno.contains("y"))
         {
-            EventOrder.Start();
-            EventOrder.ElsoEsemeny();
-            AdventureTest.tools.kard();
-            EventOrder.MasodikEsemeny();
-            EventOrder.End();
+            Events.Start();
+            Events.randomfight();
+            Events.End();
         }
         else
             System.exit( 0);
